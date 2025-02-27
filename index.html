@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Delipostres</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,9 +16,6 @@
             background-color: #ffcc00;
             text-align: center;
             padding: 20px;
-        }
-        h1 {
-            margin: 0;
             color: #fff;
         }
         nav {
@@ -44,10 +41,10 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            gap: 20px;
         }
         .postre {
             background-color: #fff;
-            margin: 20px;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -60,10 +57,6 @@
         }
         .postre h3 {
             margin: 10px 0;
-        }
-        .postre p {
-            font-size: 14px;
-            color: #777;
         }
         .postre .price {
             font-size: 18px;
@@ -78,13 +71,36 @@
             color: #fff;
             text-align: center;
             padding: 10px;
-            position: fixed;
-            bottom: 0;
+            position: relative;
+            margin-top: 50px;
             width: 100%;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        input, button {
+            padding: 10px;
+            width: 80%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #ffcc00;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ffdb4d;
         }
     </style>
 </head>
 <body>
+
     <header>
         <h1>Delipostres</h1>
         <p>Los mejores postres de la ciudad</p>
@@ -140,12 +156,14 @@
     <div class="content" id="contacto">
         <h2>Contacto</h2>
         <p>Si deseas más información, no dudes en contactarnos.</p>
-        <form>
-            <label for="name">Nombre:</label><br>
-            <input type="text" id="name" name="name"><br><br>
-            <label for="email">Correo electrónico:</label><br>
-            <input type="email" id="email" name="email"><br><br>
-            <input type="submit" value="Enviar">
+        <form action="#" method="POST">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="ejemplo@email.com" required>
+
+            <button type="submit">Enviar</button>
         </form>
     </div>
 
@@ -154,8 +172,8 @@
     </footer>
 
     <script>
-        // Aquí puedes agregar funciones para hacer la página aún más interactiva si lo deseas.
+        // Aquí puedes agregar funciones para hacer la página aún más interactiva
     </script>
+
 </body>
 </html>
-
